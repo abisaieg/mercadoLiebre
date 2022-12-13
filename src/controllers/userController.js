@@ -1,10 +1,15 @@
 
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
-    logIn: (res,req) => {
+    logIn: (req,res) => {
         
-        res.render("detail")
+        res.render("log-in");
+    },
+    validacionDeDatos: (req, res) => {
+        let mail = req.body.mail
+        let contrasena = req.body.contrasena
+        console.log(mail,contrasena);
+        res.render("log-in");
     }
     
     

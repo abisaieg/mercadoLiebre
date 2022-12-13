@@ -1,4 +1,5 @@
 const express = require('express');
+const app = require('../app');
 const router = express.Router();
 
 
@@ -6,5 +7,8 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 
 router.get('/', userController.logIn); 
+router.post('/user ', userController.validacionDeDatos); 
+
 
 module.exports = router;
+

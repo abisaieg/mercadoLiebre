@@ -19,6 +19,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
